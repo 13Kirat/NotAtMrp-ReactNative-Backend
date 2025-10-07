@@ -1,0 +1,107 @@
+
+{
+	"info": {
+		"_postman_id": "a8a0b6e8-c22e-4c6a-b2d3-f2e0c0e9e4f7",
+		"name": "Event API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Events",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/events?page=1&limit=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"events"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				},
+				"description": "Get all events with pagination. You can change the `page` and `limit` query parameters to get different results."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Event by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/events/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"events",
+						"1"
+					]
+				},
+				"description": "Get a single event by its ID. Change the ID in the URL to get a different event."
+			},
+			"response": []
+		},
+		{
+			"name": "Search Events",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/events/search?q=tech&category=Technology&location=New York&minPrice=100&maxPrice=200",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"events",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "tech"
+						},
+						{
+							"key": "category",
+							"value": "Technology"
+						},
+						{
+							"key": "location",
+							"value": "New York"
+						},
+						{
+							"key": "minPrice",
+							"value": "100"
+						},
+						{
+							"key": "maxPrice",
+							"value": "200"
+						}
+					]
+				},
+				"description": "Search for events using various criteria. You can use any combination of the following query parameters: `q`, `category`, `location`, `minPrice`, `maxPrice`."
+			},
+			"response": []
+		}
+	]
+}
